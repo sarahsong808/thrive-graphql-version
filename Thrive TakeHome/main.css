@@ -1,0 +1,129 @@
+#second-cat-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  min-height: 30%;
+}
+
+#first-cat-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  min-height: 30%;
+}
+
+#first-cat-name {
+  font-family: "Lato", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#second-cat-name {
+  font-family: "Lato", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+/* #first-cat-image:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #cab88e;
+  opacity: 0.6;
+}
+
+#second-cat-image:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #cab88e;
+  opacity: 0.6;
+} */
+
+.cats-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+  top: 50%;
+  left: 50%;
+  width: 90%;
+}
+
+.first-cat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 90vh;
+}
+
+.second-cat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 90vh;
+}
+
+.first-cat-info {
+  background-color: #cab88e;
+  height: 50vh;
+  width: 100%;
+  margin: auto;
+  text-align: left;
+}
+.second-cat-info {
+  background-color: #f8fdfc;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 40vh;
+}
+
+#first-cat-origin {
+  font-family: "Lato", sans-serif;
+  color: #f8fdfc;
+  font-size: 12px;
+}
+
+#second-cat-origin {
+  font-family: "Lato", sans-serif;
+  color: #00aa9e;
+  font-size: 12px;
+}
+
+#first-cat-description,
+#second-cat-description {
+  font-family: "Lato", sans-serif;
+  font-size: 19px;
+}
+
+/* mobile view */
+
+@media only screen and (max-width: 700px) {
+  #first-cat-description,
+  #second-cat-description {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+  }
+
+  #first-cat-name,
+  #second-cat-name {
+    font-size: 20px;
+  }
+}
