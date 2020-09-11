@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 body {
@@ -27,17 +28,15 @@ body {
 }
 
 #first-cat-name {
-  font-family: "Lato", sans-serif;
   font-size: 28px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 #second-cat-name {
-  font-family: "Lato", sans-serif;
   font-size: 28px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 #first-cat-image:before,
 #second-cat-image:before {
@@ -101,31 +100,45 @@ img {
 }
 
 #first-cat-origin {
-  font-family: "Lato", sans-serif;
   color: #f8fdfc;
   font-size: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 #second-cat-origin {
-  font-family: "Lato", sans-serif;
   color: #00aa9e;
   font-size: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 #first-cat-description,
 #second-cat-description {
-  font-family: "Lato", sans-serif;
   font-size: 19px;
+  margin-bottom: 40px;
 }
 
+#first-cat-wiki-button {
+  width: 60%;
+  height: 8vh;
+  background-color: #cab88e;
+  border: 4px solid #cc3300;
+  color: #cc3300;
+  font-weight: bold;
+}
+
+#second-cat-wiki-button {
+  width: 60%;
+  height: 8vh;
+  font-weight: bold;
+  background-color: #cc3300;
+  color: #f8fdfc;
+  border: 1px solid;
+}
 /* mobile view */
 
 @media only screen and (max-width: 700px) {
   #first-cat-description,
   #second-cat-description {
-    font-family: "Lato", sans-serif;
     font-size: 13px;
   }
 
