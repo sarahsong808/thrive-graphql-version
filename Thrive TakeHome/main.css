@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px;
+}
 #second-cat-image {
   display: flex;
   justify-content: center;
@@ -5,6 +13,7 @@
   overflow: hidden;
   width: 100%;
   min-height: 30%;
+  position: relative;
 }
 
 #first-cat-image {
@@ -14,36 +23,31 @@
   overflow: hidden;
   width: 100%;
   min-height: 30%;
+  position: relative;
 }
 
 #first-cat-name {
   font-family: "Lato", sans-serif;
   font-size: 28px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 #second-cat-name {
   font-family: "Lato", sans-serif;
   font-size: 28px;
   font-weight: bold;
+  margin-bottom: 30px;
 }
-/* #first-cat-image:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: #cab88e;
-  opacity: 0.6;
-}
-
+#first-cat-image:before,
 #second-cat-image:before {
   content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
   background: #cab88e;
   opacity: 0.6;
-} */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
 
 .cats-wrapper {
   display: flex;
@@ -52,7 +56,6 @@
   height: 97vh;
   top: 50%;
   left: 50%;
-  width: 90%;
 }
 
 .first-cat-container {
@@ -60,8 +63,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 50%;
   height: 90vh;
+  margin-right: 40px;
 }
 
 .second-cat-container {
@@ -69,7 +73,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
+  width: 50%;
   height: 90vh;
 }
 
@@ -77,16 +81,17 @@
   background-color: #cab88e;
   height: 50vh;
   width: 100%;
-  margin: auto;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  padding: 30px;
 }
 .second-cat-info {
   background-color: #f8fdfc;
   height: 50vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  padding: 30px;
 }
 
 img {
@@ -99,12 +104,14 @@ img {
   font-family: "Lato", sans-serif;
   color: #f8fdfc;
   font-size: 12px;
+  margin-bottom: 30px;
 }
 
 #second-cat-origin {
   font-family: "Lato", sans-serif;
   color: #00aa9e;
   font-size: 12px;
+  margin-bottom: 30px;
 }
 
 #first-cat-description,
@@ -125,5 +132,34 @@ img {
   #first-cat-name,
   #second-cat-name {
     font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .cats-wrapper {
+    display: block;
+  }
+
+  .first-cat-container {
+    margin-right: 40px;
+    width: 100%;
+    height: 70vh;
+    padding-bottom: 40px;
+  }
+
+  .second-cat-container {
+    width: 100%;
+    flex-direction: column-reverse;
+    height: 70vh;
+    padding-bottom: 40px;
+  }
+
+  .first-cat-info,
+  .second-cat-info {
+    height: 30vh;
+  }
+
+  #first-cat-origin,
+  #second-cat-origin {
+    margin-bottom: 30px;
   }
 }

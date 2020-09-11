@@ -16,22 +16,20 @@ function ajax_get(url, callback) {
   xmlhttp.open("GET", url, true);
   xmlhttp.send();
 }
-
 ajax_get("https://api.thecatapi.com/v1/images/search?breed_ids=acur", function (
   data
 ) {
+  const dataBreeds = data[0]["breeds"][0];
   //origin
-  document.getElementById("first-cat-origin").innerHTML =
-    data[0]["breeds"][0]["origin"];
+  document.getElementById("first-cat-origin").innerHTML = dataBreeds["origin"];
   //name
-  document.getElementById("first-cat-name").innerHTML =
-    data[0]["breeds"][0]["name"];
+  document.getElementById("first-cat-name").innerHTML = dataBreeds["name"];
   //image
   var html = '<img src="' + data[0]["url"] + '" alt="cat image">';
   document.getElementById("first-cat-image").innerHTML = html;
   //description
   document.getElementById("first-cat-description").innerHTML =
-    data[0]["breeds"][0]["description"];
+    dataBreeds["description"];
 });
 
 //acur
@@ -40,19 +38,18 @@ ajax_get("https://api.thecatapi.com/v1/images/search?breed_ids=acur", function (
 ajax_get("https://api.thecatapi.com/v1/images/search?breed_ids=amis", function (
   data
 ) {
+  const dataBreeds = data[0]["breeds"][0];
   //origin
-  document.getElementById("second-cat-origin").innerHTML =
-    data[0]["breeds"][0]["origin"];
+  document.getElementById("second-cat-origin").innerHTML = dataBreeds["origin"];
   //name
-  document.getElementById("second-cat-name").innerHTML =
-    data[0]["breeds"][0]["name"];
+  document.getElementById("second-cat-name").innerHTML = dataBreeds["name"];
   //image
   var html =
     '<img src="' + data[0]["url"] + '" height="275vh" alt="cat image">';
   document.getElementById("second-cat-image").innerHTML = html;
   //description
   document.getElementById("second-cat-description").innerHTML =
-    data[0]["breeds"][0]["description"];
+    dataBreeds["description"];
 });
 
 //https://api.thecatapi.com/v1/breeds/search?name
