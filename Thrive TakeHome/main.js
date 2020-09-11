@@ -32,8 +32,10 @@ ajax_get("https://api.thecatapi.com/v1/images/search?breed_ids=acur", function (
   document.getElementById("first-cat-description").innerHTML =
     dataBreeds["description"];
   //wiki url
-  document.getElementById("first-cat-wiki").innerHTML =
-    dataBreeds["wikipedia_url"];
+  var wiki = document.getElementById("first-cat-wiki-button");
+  wiki.onclick = function (event) {
+    window.location.href = dataBreeds["wikipedia_url"];
+  };
 });
 
 //acur
@@ -55,8 +57,8 @@ ajax_get("https://api.thecatapi.com/v1/images/search?breed_ids=amis", function (
   document.getElementById("second-cat-description").innerHTML =
     dataBreeds["description"];
   //wiki url
-  var wiki = document.getElementById("second-cat-wiki");
-  wiki.addEventListener("click", function (event) {
+  var wiki = document.getElementById("second-cat-wiki-button");
+  wiki.onclick = function (event) {
     window.location.href = dataBreeds["wikipedia_url"];
-  });
+  };
 });
