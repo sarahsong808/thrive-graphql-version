@@ -24,13 +24,8 @@ const typeDefs = gql`
 `;
 
 // Resolvers define the technique for fetching the types defined in the
-// schema. This resolver retrieves books from the "books" array above.
+// schema.
 const resolvers = {
-  //   Image: {
-  //     url: parent => {
-  //         const reponse = await fetch(url)
-  //     }
-  //   },
   Query: {
     getBreed: async (_, { id }) => {
       const response = await fetch(
